@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -49,12 +50,24 @@ namespace Census_System
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            date.Text = DateTime.Now.ToLongDateString();
+            time.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                new LogIn().Show();
+                this.Hide();
+            }
         }
     }
 }
