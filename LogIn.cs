@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 using BCrypt.Net;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.Diagnostics;
 namespace Census_System
 {
     public partial class LogIn : Form
@@ -129,6 +130,20 @@ namespace Census_System
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string pdfFilePath = @"C:\Users\user\source\repos\Census System\resources\developers.pdf";
+
+            try
+            {
+                Process.Start(pdfFilePath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while trying to open the PDF file: {ex.Message}");
+            }
         }
     }
 }
