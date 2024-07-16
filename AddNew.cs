@@ -35,6 +35,7 @@ namespace Census_System
         {
             new MainMenu().Show();
             this.Hide();
+            this.Dispose();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace Census_System
                     string sql = "INSERT INTO personal_information (fullname, date_of_birth, age, gender, marital_status, citizenship, religion, indigenous_group, address, mobile_number, email_address, relationship_to_household_head, household_size, educational_attainment, school_attended, current_enrollment_status, employment_status, health_insurance_coverage, voter_status, disability) " +
                                 "VALUES (@fullname, @date_of_birth, @age, @gender, @marital_status, @citizenship, @religion, @indigenous_group, @address, @mobile_number, @email_address, @relationship_to_household_head, @household_size, @educational_attainment, @school_attended, @current_enrollment_status, @employment_status, @health_insurance_coverage, @voter_status, @disability)";
                     cmd = new SQLiteCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@id", _ID);
                     cmd.Parameters.AddWithValue("@fullname", txtFullName.Text);
                     cmd.Parameters.AddWithValue("@date_of_birth", dtBirthDate.Value);
                     cmd.Parameters.AddWithValue("@age", txtAge.Text);  // Ensure txtAge.Text is used, not txtAge
@@ -67,7 +69,6 @@ namespace Census_System
                     cmd.Parameters.AddWithValue("@health_insurance_coverage", txtHealthInsurance.Text);
                     cmd.Parameters.AddWithValue("@voter_status", cboVoterStatus.Text);
                     cmd.Parameters.AddWithValue("@disability", txtDisability.Text);
-                    cmd.Parameters.AddWithValue("@id", _ID);
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Record has been successfully saved!", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -167,3 +168,4 @@ namespace Census_System
         }
     }
 }
+

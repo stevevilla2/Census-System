@@ -139,6 +139,12 @@ namespace Census_System
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
+            this.Dispose();
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

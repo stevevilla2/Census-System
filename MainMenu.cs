@@ -59,6 +59,7 @@ namespace Census_System
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
+            this.Dispose();
         }
 
         private void btn_logout_Click(object sender, EventArgs e)
@@ -89,26 +90,26 @@ namespace Census_System
                         this.Hide();
                         f.btnSave.Enabled = false;
                         f._ID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                        f.txtFullName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                        f.dtBirthDate.Value = DateTime.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
-                        f.txtAge.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                        f.cboGender.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                        f.cboMaritalStatus.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                        f.txtCitizenship.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                        f.txtReligion.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-                        f.txtIndigenousGroup.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-                        f.txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
-                        f.txtMobileNumber.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-                        f.txtEmailAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
-                        f.cboRel.Text = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
-                        f.txtHouseholdSize.Text = dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString();
-                        f.cboEducationalAttainment.Text = dataGridView1.Rows[e.RowIndex].Cells[14].Value.ToString();
-                        f.txtSchoolAttended.Text = dataGridView1.Rows[e.RowIndex].Cells[15].Value.ToString();
-                        f.cboEnrollmentStatus.Text = dataGridView1.Rows[e.RowIndex].Cells[16].Value.ToString();
-                        f.cboEmploymentStatus.Text = dataGridView1.Rows[e.RowIndex].Cells[17].Value.ToString();
-                        f.txtHealthInsurance.Text = dataGridView1.Rows[e.RowIndex].Cells[18].Value.ToString();
-                        f.cboVoterStatus.Text = dataGridView1.Rows[e.RowIndex].Cells[19].Value.ToString();
-                        f.txtDisability.Text = dataGridView1.Rows[e.RowIndex].Cells[20].Value.ToString();
+                        f.txtFullName.Text = dataGridView1.Rows[e.RowIndex].Cells["full_name"].Value.ToString();
+                        f.dtBirthDate.Value = DateTime.Parse(dataGridView1.Rows[e.RowIndex].Cells["birth_date"].Value.ToString());
+                        f.txtAge.Text = dataGridView1.Rows[e.RowIndex].Cells["age"].Value.ToString();
+                        f.cboGender.Text = dataGridView1.Rows[e.RowIndex].Cells["gender"].Value.ToString();
+                        f.cboMaritalStatus.Text = dataGridView1.Rows[e.RowIndex].Cells["marital_status"].Value.ToString();
+                        f.txtCitizenship.Text = dataGridView1.Rows[e.RowIndex].Cells["citizenship"].Value.ToString();
+                        f.txtReligion.Text = dataGridView1.Rows[e.RowIndex].Cells["religion"].Value.ToString();
+                        f.txtIndigenousGroup.Text = dataGridView1.Rows[e.RowIndex].Cells["indigenous_group"].Value.ToString();
+                        f.txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells["address"].Value.ToString();
+                        f.txtMobileNumber.Text = dataGridView1.Rows[e.RowIndex].Cells["mobile_number"].Value.ToString();
+                        f.txtEmailAddress.Text = dataGridView1.Rows[e.RowIndex].Cells["email_address"].Value.ToString();
+                        f.cboRel.Text = dataGridView1.Rows[e.RowIndex].Cells["relationship"].Value.ToString();
+                        f.txtHouseholdSize.Text = dataGridView1.Rows[e.RowIndex].Cells["household_size"].Value.ToString();
+                        f.cboEducationalAttainment.Text = dataGridView1.Rows[e.RowIndex].Cells["educational_attainment"].Value.ToString();
+                        f.txtSchoolAttended.Text = dataGridView1.Rows[e.RowIndex].Cells["school_attended"].Value.ToString();
+                        f.cboEnrollmentStatus.Text = dataGridView1.Rows[e.RowIndex].Cells["current_enrollment_status"].Value.ToString();
+                        f.cboEmploymentStatus.Text = dataGridView1.Rows[e.RowIndex].Cells["employment_status"].Value.ToString();
+                        f.txtHealthInsurance.Text = dataGridView1.Rows[e.RowIndex].Cells["health_insurance"].Value.ToString();
+                        f.cboVoterStatus.Text = dataGridView1.Rows[e.RowIndex].Cells["voter_status"].Value.ToString();
+                        f.txtDisability.Text = dataGridView1.Rows[e.RowIndex].Cells["disability"].Value.ToString();
                         f.ShowDialog();
                     }
                     else if (colName == "btn_delete")
@@ -127,7 +128,6 @@ namespace Census_System
                 }
                 else
                 {
-                    MessageBox.Show("Index is out of bounds.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
 

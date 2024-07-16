@@ -130,6 +130,8 @@ namespace Census_System
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
+            this.Close();
+            this.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -144,6 +146,11 @@ namespace Census_System
             {
                 MessageBox.Show($"An error occurred while trying to open the PDF file: {ex.Message}");
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
