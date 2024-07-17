@@ -22,9 +22,9 @@ namespace Census_System
             conn = new SQLiteConnection("Data Source=database.db;Version=3");
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void LogIn_Load(object sender, EventArgs e)
         {
-
+            txtUsername.Focus();
         }
 
         private void label1_Click(object sender, EventArgs e)

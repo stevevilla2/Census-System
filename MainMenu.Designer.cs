@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Hello = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.date = new System.Windows.Forms.Label();
@@ -44,6 +44,12 @@
             this.btn_search = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_export = new System.Windows.Forms.Button();
+            this.label_familycount = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.full_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,29 +74,25 @@
             this.disability = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_export = new System.Windows.Forms.Button();
-            this.label_familycount = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Hello
             // 
             this.Hello.AutoSize = true;
-            this.Hello.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hello.Location = new System.Drawing.Point(25, 13);
+            this.Hello.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hello.Location = new System.Drawing.Point(199, 12);
             this.Hello.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Hello.Name = "Hello";
-            this.Hello.Size = new System.Drawing.Size(45, 19);
+            this.Hello.Size = new System.Drawing.Size(49, 19);
             this.Hello.TabIndex = 0;
             this.Hello.Text = "label1";
+            this.Hello.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Hello.Click += new System.EventHandler(this.Hello_Click);
             // 
             // timer1
@@ -99,23 +101,23 @@
             // 
             // date
             // 
+            this.date.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.date.AutoSize = true;
-            this.date.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Location = new System.Drawing.Point(295, 13);
+            this.date.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date.Location = new System.Drawing.Point(320, 12);
             this.date.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(38, 19);
+            this.date.Size = new System.Drawing.Size(42, 19);
             this.date.TabIndex = 1;
             this.date.Text = "Date";
+            this.date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.time);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.btn_logout);
-            this.panel1.Controls.Add(this.Hello);
-            this.panel1.Controls.Add(this.date);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -125,14 +127,16 @@
             // 
             // time
             // 
+            this.time.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.time.AutoSize = true;
-            this.time.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.time.Location = new System.Drawing.Point(157, 13);
+            this.time.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time.Location = new System.Drawing.Point(452, 12);
             this.time.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(38, 19);
+            this.time.Size = new System.Drawing.Size(43, 19);
             this.time.TabIndex = 11;
             this.time.Text = "Time";
+            this.time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button5
             // 
@@ -164,9 +168,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.time);
             this.panel2.Controls.Add(this.btn_add);
             this.panel2.Controls.Add(this.btn_search);
             this.panel2.Controls.Add(this.searchBox);
+            this.panel2.Controls.Add(this.date);
+            this.panel2.Controls.Add(this.Hello);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 44);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -216,258 +223,17 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(0, 117);
+            this.panel3.Location = new System.Drawing.Point(0, 120);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(894, 464);
+            this.panel3.Size = new System.Drawing.Size(894, 344);
             this.panel3.TabIndex = 4;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView1.ColumnHeadersHeight = 30;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.full_name,
-            this.birth_date,
-            this.age,
-            this.gender,
-            this.marital_status,
-            this.citizenship,
-            this.religion,
-            this.indigenous_group,
-            this.address,
-            this.mobile_number,
-            this.email_address,
-            this.relationship,
-            this.household_size,
-            this.educational_attainment,
-            this.school_attended,
-            this.current_enrollment_status,
-            this.employment_status,
-            this.health_insurance,
-            this.voter_status,
-            this.disability,
-            this.btn_edit,
-            this.btn_delete});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 40;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.ShowCellErrors = false;
-            this.dataGridView1.ShowCellToolTips = false;
-            this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(894, 464);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.HeaderText = "id";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.Visible = false;
-            this.Column1.Width = 5;
-            // 
-            // full_name
-            // 
-            this.full_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.full_name.HeaderText = "Full Name";
-            this.full_name.Name = "full_name";
-            // 
-            // birth_date
-            // 
-            this.birth_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.birth_date.HeaderText = "Birth Date";
-            this.birth_date.Name = "birth_date";
-            // 
-            // age
-            // 
-            this.age.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.age.HeaderText = "Age";
-            this.age.Name = "age";
-            this.age.Width = 58;
-            // 
-            // gender
-            // 
-            this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            this.gender.Width = 80;
-            // 
-            // marital_status
-            // 
-            this.marital_status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.marital_status.HeaderText = "Marital Status";
-            this.marital_status.Name = "marital_status";
-            this.marital_status.Width = 123;
-            // 
-            // citizenship
-            // 
-            this.citizenship.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.citizenship.HeaderText = "Citizenship";
-            this.citizenship.Name = "citizenship";
-            this.citizenship.Visible = false;
-            this.citizenship.Width = 96;
-            // 
-            // religion
-            // 
-            this.religion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.religion.HeaderText = "Religion";
-            this.religion.Name = "religion";
-            this.religion.Width = 86;
-            // 
-            // indigenous_group
-            // 
-            this.indigenous_group.HeaderText = "Indigenous Group";
-            this.indigenous_group.Name = "indigenous_group";
-            this.indigenous_group.Visible = false;
-            this.indigenous_group.Width = 136;
-            // 
-            // address
-            // 
-            this.address.HeaderText = "Address";
-            this.address.Name = "address";
-            this.address.Width = 86;
-            // 
-            // mobile_number
-            // 
-            this.mobile_number.HeaderText = "Mobile Number";
-            this.mobile_number.Name = "mobile_number";
-            this.mobile_number.Visible = false;
-            this.mobile_number.Width = 125;
-            // 
-            // email_address
-            // 
-            this.email_address.HeaderText = "Email Address";
-            this.email_address.Name = "email_address";
-            this.email_address.Visible = false;
-            this.email_address.Width = 118;
-            // 
-            // relationship
-            // 
-            this.relationship.HeaderText = "Relationship to Household Head";
-            this.relationship.Name = "relationship";
-            this.relationship.Visible = false;
-            this.relationship.Width = 221;
-            // 
-            // household_size
-            // 
-            this.household_size.HeaderText = "Household Size";
-            this.household_size.Name = "household_size";
-            this.household_size.Visible = false;
-            this.household_size.Width = 123;
-            // 
-            // educational_attainment
-            // 
-            this.educational_attainment.HeaderText = "Educational Attainment";
-            this.educational_attainment.Name = "educational_attainment";
-            this.educational_attainment.Visible = false;
-            this.educational_attainment.Width = 169;
-            // 
-            // school_attended
-            // 
-            this.school_attended.HeaderText = "School Attended";
-            this.school_attended.Name = "school_attended";
-            this.school_attended.Visible = false;
-            this.school_attended.Width = 129;
-            // 
-            // current_enrollment_status
-            // 
-            this.current_enrollment_status.HeaderText = "Current Enrollment Status";
-            this.current_enrollment_status.Name = "current_enrollment_status";
-            this.current_enrollment_status.Visible = false;
-            this.current_enrollment_status.Width = 185;
-            // 
-            // employment_status
-            // 
-            this.employment_status.HeaderText = "Employment Status";
-            this.employment_status.Name = "employment_status";
-            this.employment_status.Width = 157;
-            // 
-            // health_insurance
-            // 
-            this.health_insurance.HeaderText = "Health Insurance Coverage";
-            this.health_insurance.Name = "health_insurance";
-            this.health_insurance.Visible = false;
-            this.health_insurance.Width = 195;
-            // 
-            // voter_status
-            // 
-            this.voter_status.HeaderText = "Voter Status";
-            this.voter_status.Name = "voter_status";
-            this.voter_status.Width = 111;
-            // 
-            // disability
-            // 
-            this.disability.HeaderText = "Disability";
-            this.disability.Name = "disability";
-            this.disability.Visible = false;
-            this.disability.Width = 87;
-            // 
-            // btn_edit
-            // 
-            this.btn_edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.btn_edit.HeaderText = "";
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.btn_edit.Text = "Edit/View";
-            this.btn_edit.UseColumnTextForButtonValue = true;
-            this.btn_edit.Width = 5;
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.btn_delete.HeaderText = "";
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.btn_delete.Text = "Delete";
-            this.btn_delete.UseColumnTextForButtonValue = true;
-            this.btn_delete.Width = 5;
             // 
             // panel4
             // 
@@ -493,6 +259,7 @@
             this.btn_export.TabIndex = 3;
             this.btn_export.Text = "Export Data";
             this.btn_export.UseVisualStyleBackColor = false;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
             // 
             // label_familycount
             // 
@@ -535,6 +302,267 @@
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridView1.ColumnHeadersHeight = 30;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.full_name,
+            this.birth_date,
+            this.age,
+            this.gender,
+            this.marital_status,
+            this.citizenship,
+            this.religion,
+            this.indigenous_group,
+            this.address,
+            this.mobile_number,
+            this.email_address,
+            this.relationship,
+            this.household_size,
+            this.educational_attainment,
+            this.school_attended,
+            this.current_enrollment_status,
+            this.employment_status,
+            this.health_insurance,
+            this.voter_status,
+            this.disability,
+            this.btn_edit,
+            this.btn_delete});
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.ShowCellErrors = false;
+            this.dataGridView1.ShowCellToolTips = false;
+            this.dataGridView1.ShowEditingIcon = false;
+            this.dataGridView1.ShowRowErrors = false;
+            this.dataGridView1.Size = new System.Drawing.Size(894, 344);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.HeaderText = "id";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.Visible = false;
+            this.Column1.Width = 5;
+            // 
+            // full_name
+            // 
+            this.full_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.full_name.HeaderText = "Full Name";
+            this.full_name.Name = "full_name";
+            this.full_name.Width = 93;
+            // 
+            // birth_date
+            // 
+            this.birth_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.birth_date.HeaderText = "Birth Date";
+            this.birth_date.Name = "birth_date";
+            this.birth_date.Width = 94;
+            // 
+            // age
+            // 
+            this.age.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.age.HeaderText = "Age";
+            this.age.Name = "age";
+            this.age.Width = 57;
+            // 
+            // gender
+            // 
+            this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.gender.HeaderText = "Gender";
+            this.gender.Name = "gender";
+            this.gender.Width = 75;
+            // 
+            // marital_status
+            // 
+            this.marital_status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.marital_status.HeaderText = "Marital Status";
+            this.marital_status.Name = "marital_status";
+            this.marital_status.Width = 114;
+            // 
+            // citizenship
+            // 
+            this.citizenship.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.citizenship.HeaderText = "Citizenship";
+            this.citizenship.Name = "citizenship";
+            this.citizenship.Width = 95;
+            // 
+            // religion
+            // 
+            this.religion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.religion.HeaderText = "Religion";
+            this.religion.Name = "religion";
+            this.religion.Width = 79;
+            // 
+            // indigenous_group
+            // 
+            this.indigenous_group.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.indigenous_group.HeaderText = "Indigenous Group";
+            this.indigenous_group.Name = "indigenous_group";
+            this.indigenous_group.Width = 135;
+            // 
+            // address
+            // 
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.address.HeaderText = "Address";
+            this.address.Name = "address";
+            this.address.Width = 81;
+            // 
+            // mobile_number
+            // 
+            this.mobile_number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.mobile_number.HeaderText = "Mobile Number";
+            this.mobile_number.Name = "mobile_number";
+            this.mobile_number.Width = 124;
+            // 
+            // email_address
+            // 
+            this.email_address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.email_address.HeaderText = "Email Address";
+            this.email_address.Name = "email_address";
+            this.email_address.Width = 117;
+            // 
+            // relationship
+            // 
+            this.relationship.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.relationship.HeaderText = "Relationship to Household Head";
+            this.relationship.Name = "relationship";
+            this.relationship.Width = 220;
+            // 
+            // household_size
+            // 
+            this.household_size.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.household_size.HeaderText = "Household Size";
+            this.household_size.Name = "household_size";
+            this.household_size.Width = 122;
+            // 
+            // educational_attainment
+            // 
+            this.educational_attainment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.educational_attainment.HeaderText = "Educational Attainment";
+            this.educational_attainment.Name = "educational_attainment";
+            this.educational_attainment.Width = 168;
+            // 
+            // school_attended
+            // 
+            this.school_attended.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.school_attended.HeaderText = "School Attended";
+            this.school_attended.Name = "school_attended";
+            this.school_attended.Width = 128;
+            // 
+            // current_enrollment_status
+            // 
+            this.current_enrollment_status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.current_enrollment_status.HeaderText = "Current Enrollment Status";
+            this.current_enrollment_status.Name = "current_enrollment_status";
+            this.current_enrollment_status.Width = 184;
+            // 
+            // employment_status
+            // 
+            this.employment_status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.employment_status.HeaderText = "Employment Status";
+            this.employment_status.Name = "employment_status";
+            this.employment_status.Width = 145;
+            // 
+            // health_insurance
+            // 
+            this.health_insurance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.health_insurance.HeaderText = "Health Insurance Coverage";
+            this.health_insurance.Name = "health_insurance";
+            this.health_insurance.Width = 194;
+            // 
+            // voter_status
+            // 
+            this.voter_status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.voter_status.HeaderText = "Voter Status";
+            this.voter_status.Name = "voter_status";
+            this.voter_status.Width = 104;
+            // 
+            // disability
+            // 
+            this.disability.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.disability.HeaderText = "Disability";
+            this.disability.Name = "disability";
+            this.disability.Width = 86;
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.btn_edit.HeaderText = "";
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.btn_edit.Text = "Edit/View";
+            this.btn_edit.UseColumnTextForButtonValue = true;
+            this.btn_edit.Width = 5;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.btn_delete.HeaderText = "";
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseColumnTextForButtonValue = true;
+            this.btn_delete.Width = 5;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(209, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(510, 31);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Barangay San Isidro Galas Census System";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -560,9 +588,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -576,7 +604,6 @@
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.Button button5;
@@ -588,6 +615,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn full_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn birth_date;
@@ -611,5 +639,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn disability;
         private System.Windows.Forms.DataGridViewButtonColumn btn_edit;
         private System.Windows.Forms.DataGridViewButtonColumn btn_delete;
+        private System.Windows.Forms.Label label2;
     }
 }
