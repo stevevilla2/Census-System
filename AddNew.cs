@@ -26,7 +26,7 @@ namespace Census_System
             cmd = new SQLiteCommand();
         }
 
-        public AddNew(MainMenu f) : this()  // Ensure the base constructor is called
+        public AddNew(MainMenu f) : this()
         {
             this.f = f;
         }
