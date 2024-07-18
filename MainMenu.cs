@@ -17,18 +17,19 @@ namespace Census_System
         {
             InitializeComponent();
             conn = new SQLiteConnection("Data Source=database.db;Version=3");
-            this.Load += MainMenu_Load; // Ensure LoadRecord is called on initialization
+            // Start the timer when the form initializes
+            timer1.Start();
+            UpdateFamilyCountLabel();
+            UpdateGreetingLabel();
+            Load += MainMenu_Load; // Hook into the Load event
         }
 
         // Constructor that accepts a username
-        public MainMenu(string username)
+        // Constructor that accepts a username
+        public MainMenu(string username) : this()
         {
-            InitializeComponent();
-            conn = new SQLiteConnection("Data Source=database.db;Version=3");
             _loggedInUsername = username;
-            UpdateGreetingLabel();
-            timer1.Start();
-            this.Load += MainMenu_Load; // Ensure LoadRecord is called on initialization
+            UpdateGreetingLabel(); // Update greeting label with username
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -53,8 +54,11 @@ namespace Census_System
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            // Update labels with current date, time, and any other dynamic data
             date.Text = DateTime.Now.ToLongDateString();
             time.Text = DateTime.Now.ToLongTimeString();
+            UpdateGreetingLabel(); // Update greeting label continuously
+            UpdateFamilyCountLabel(); // Update family count label continuously
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -145,8 +149,7 @@ namespace Census_System
         {
             try
             {
-                LoadRecord();
-                UpdateFamilyCountLabel();
+                LoadRecord(); // Load records initially
             }
             catch (Exception ex)
             {
@@ -262,7 +265,7 @@ namespace Census_System
                     // Save the Excel file
                     var saveFileDialog = new SaveFileDialog();
                     saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
-                    saveFileDialog.FileName = "PersonalInformation.xlsx";
+                    saveFileDialog.FileName = "Personal_Information.xlsx";
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
                         workbook.SaveAs(saveFileDialog.FileName);

@@ -33,9 +33,11 @@ namespace Census_System
 
         private void button5_Click(object sender, EventArgs e)
         {
-            new MainMenu().Show();
+            MainMenu mainMenuForm = new MainMenu();
+            mainMenuForm.Show();
             this.Hide();
             this.Dispose();
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
