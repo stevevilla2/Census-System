@@ -133,6 +133,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\developers.pdf" />
     <None Include="resources\earist-logo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +188,7 @@
     <Content Include="obj\Debug\Census System.exe" />
     <Content Include="obj\Debug\Census System.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="resources\brgy logo.ico" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
