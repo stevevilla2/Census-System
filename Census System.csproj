@@ -105,6 +105,7 @@
     <None Include="bin\Debug\Census System.exe.config" />
     <None Include="bin\Debug\database.db" />
     <None Include="bin\Debug\database.sqbpro" />
+    <None Include="database.db" />
     <None Include="obj\Census System.csproj.nuget.dgspec.json" />
     <None Include="obj\Census System.csproj.nuget.g.props" />
     <None Include="obj\Census System.csproj.nuget.g.targets" />
