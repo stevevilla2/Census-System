@@ -65,6 +65,7 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.cs">
@@ -82,6 +83,11 @@
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Census_System.AddNew.resources" />
+    <EmbeddedResource Include="obj\Debug\Census_System.LogIn.resources" />
+    <EmbeddedResource Include="obj\Debug\Census_System.MainMenu.resources" />
+    <EmbeddedResource Include="obj\Debug\Census_System.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\Census_System.Register.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -95,6 +101,23 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\Census System - Shortcut.lnk" />
+    <None Include="bin\Debug\Census System.exe.config" />
+    <None Include="bin\Debug\database.db" />
+    <None Include="bin\Debug\database.sqbpro" />
+    <None Include="obj\Census System.csproj.nuget.dgspec.json" />
+    <None Include="obj\Census System.csproj.nuget.g.props" />
+    <None Include="obj\Census System.csproj.nuget.g.targets" />
+    <None Include="obj\Debug\Census S.59B63847.Up2Date" />
+    <None Include="obj\Debug\Census System.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\Census System.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Census System.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\Census System.csproj.SuggestedBindingRedirects.cache" />
+    <None Include="obj\Debug\Census System.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\project.assets.json" />
+    <None Include="obj\project.nuget.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,6 +159,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\BCrypt.Net.dll" />
+    <Content Include="bin\Debug\Census System.exe" />
+    <Content Include="bin\Debug\Census System.pdb" />
+    <Content Include="bin\Debug\ClosedXML.dll" />
+    <Content Include="bin\Debug\DocumentFormat.OpenXml.dll" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\ExcelNumberFormat.dll" />
+    <Content Include="bin\Debug\Irony.dll" />
+    <Content Include="bin\Debug\SixLabors.Fonts.dll" />
+    <Content Include="bin\Debug\System.Buffers.dll" />
+    <Content Include="bin\Debug\System.Data.SQLite.dll" />
+    <Content Include="bin\Debug\System.Data.SQLite.EF6.dll" />
+    <Content Include="bin\Debug\System.Data.SQLite.Linq.dll" />
+    <Content Include="bin\Debug\System.IO.Packaging.dll" />
+    <Content Include="bin\Debug\System.Memory.dll" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.dll" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\Debug\x64\SQLite.Interop.dll" />
+    <Content Include="bin\Debug\x86\SQLite.Interop.dll" />
+    <Content Include="bin\Debug\XLParser.dll" />
+    <Content Include="obj\Debug\Census System.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Census System.exe" />
+    <Content Include="obj\Debug\Census System.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
